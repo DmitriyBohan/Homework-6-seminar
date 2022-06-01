@@ -11,17 +11,20 @@ Console.WriteLine("Последовательность из скольки чи
 int FibNumber = Convert.ToInt32(Console.ReadLine());
 Console.Write($"N = {FibNumber} -> ");
 
-
-int prev = 0;
-int current = 1;
-int temp;
-
-Console.Write(prev + " ");
-for (int i = 0; i <= FibNumber - 2; i++)
+void Fibonacci()
 {
-    Console.Write(current + " ");
-    temp = current;
-    current = current + prev;
-    prev = temp;
+    int prev = 0;
+    int current = 1;
+    int temp;
+
+    Console.Write(prev + " ");
+    for (int i = 0; i <= FibNumber - 2; i++)
+    {
+        Console.Write(current + " ");
+        temp = current;
+        current = current + prev;
+        prev = temp;
+    }
 }
+Fibonacci();
 

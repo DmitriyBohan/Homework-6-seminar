@@ -18,9 +18,20 @@ double b2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите k2: ");
 double k2 = Convert.ToInt32(Console.ReadLine());
 
+void FindPoit()
+{
+    if (k1 == k2)
+    {
+        Console.WriteLine("Прямые параллельны  ");
+    }
+    else
+    {
+        double Xcord = ((b1 - b2) * -1) / (k1 - k2);
+        double Ycord = k1 * Xcord + b1;
+        Console.WriteLine("Координаты пересечения прямых: ");
+        Console.WriteLine("X = " + Xcord);
+        Console.WriteLine("Y = " + Ycord);
+    }
+}
 
-double Xcord = ((b1 - b2)*-1) / (k1 - k2);
-double Ycord = k2 * Xcord + b2;
-
-Console.WriteLine("X = " + Xcord);
-Console.WriteLine("Y = " + Ycord);
+FindPoit();
